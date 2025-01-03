@@ -1,0 +1,51 @@
+body{
+    position: relative;
+}
+.top-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Logo{
+    margin-top: 100px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    border-style: solid;
+    margin: auto;
+    width: 800px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.search1-1, .mic-1, .cam-1, .expe-1 ,.apps-1{
+    height: 100%;
+    width: 100%;
+}
+
+.search1, .mic, .cam, .expe, .apps{
+    height: 30px;
+    width: 30px;
+}
+.input{
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+.input-box{
+    width: 660px;
+    height: 30px;
+    border-width: 0;
+}
+.input-box:focus{
+    outline:none;
+}
+
+.upImg, .expe, .apps{
+    margin-left: 50px;
+}
