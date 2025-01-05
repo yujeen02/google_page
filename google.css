@@ -1,13 +1,14 @@
 body{
     position: relative;
 }
+
 .top-right{
     display: flex;
     justify-content: flex-end;
 }
 
 .Logo{
-    margin-top: 100px;
+    margin-top: 150px;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -22,6 +23,10 @@ body{
     width: 800px;
     height: 50px;
     border-radius: 50px;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    margin-top: 50px;
+    box-shadow: 0 0 4px;
 }
 
 .search1-1, .mic-1, .cam-1, .expe-1 ,.apps-1{
@@ -33,15 +38,23 @@ body{
     height: 30px;
     width: 30px;
 }
+
+.mic:hover, .cam:hover{
+    cursor: pointer;
+}
+
 .input{
     margin-left: 5px;
     margin-right: 5px; 
 }
+
 .input-box{
     width: 660px;
     height: 30px;
     border-width: 0;
+    font-size: larger;
 }
+
 .input-box:focus{
     outline:none;
 }
@@ -49,3 +62,108 @@ body{
 .upImg, .expe, .apps{
     margin-left: 50px;
 }
+
+/* 바로가기 */
+.shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; 
+    margin-top: 70px;
+}
+
+.cir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.naver, .youtube, .daum {
+    width: 70px; 
+    height: 70px;
+    background-color: #e0e0e0; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(216, 212, 212, 0.1);
+}
+
+.naver img, .youtube img, .daum img {
+    width: 40px; 
+    height: 40px;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.cirName {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.squ1, .squ2, .squ3{
+    width: 150px;
+    height: 170px;
+    border-radius: 8px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.dotImg{
+    width: 30px;
+    height: 30px;
+}
+
+.iconDot{
+    position: absolute;
+    top: 10px;  
+    right: 10px;
+    opacity: 0;
+}
+
+.squ1:hover, .squ2:hover, .squ3:hover{
+    background-color: rgb(168, 166, 166);
+    cursor: pointer;
+}
+
+.squ1:hover .iconDot, .squ2:hover .iconDot, .squ3:hover .iconDot {
+    opacity: 1;  
+    transition: opacity 2s;
+}
+
+.iconDot:hover .dotImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: gray;
+}
+
+/* 우측 하단 맞춤설정 */
+
+.pageSetting{
+    background-color: rgb(216, 227, 250);
+    display: flex;
+    width: 180px;
+    border-radius: 50px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    gap: 8px;
+}
+
+.pageSetting img{
+    width: 20px;
+    height: 25px;
+}
+
+

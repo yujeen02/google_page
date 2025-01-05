@@ -7,7 +7,60 @@
     <title>Document</title>
 </head>
 <script>
-        
+
+    function alertBtn(btn) {
+        if(btn === 'mic') {
+            alert("마이크 준비중입니다.");
+        } else if(btn === 'cam') {
+            alert("카메라 준비중입니다.");
+        }
+    }
+
+    function moveToLink(site) {
+        if(site === 'squ1') {
+            window.location.href="https://www.naver.com/";
+        } else if(site === 'squ2') {
+            window.location.href="https://www.youtube.com/";
+        } else if(site === 'squ3') {
+            window.location.href="https://www.daum.net/";
+        }
+    }
+    
+    const data = [
+        {id: 1, name: "계정", url: "."},
+        {id: 2, name: "검색", url: "."},
+        {id: 3, name: "지도", url: "."},
+        {id: 4, name: "YouTube", url: "."},
+        {id: 5, name: "Gemini", url: "."},
+        {id: 6, name: "뉴스", url: "."},
+        {id: 7, name: "Gmail", url: "."},
+        {id: 8, name: "Meet", url: "."},
+        {id: 9, name: "채팅", url: "."},
+        {id: 10, name: "주소록", url: "."},
+        {id: 11, name: "드라이브", url: "."},
+        {id: 12, name: "Calendar", url: "."},
+        {id: 13, name: "Play", url: "."},
+        {id: 14, name: "번역", url: "."},
+        {id: 15, name: "사진", url: "."},
+        {id: 16, name: "내 광고 센터", url: "."},
+        {id: 17, name: "쇼핑", url: "."},
+        {id: 18, name: "금융", url: "."},
+        {id: 19, name: "Docs", url: "."},
+        {id: 20, name: "Sheets", url: "."},
+        {id: 21, name: "Slides", url: "."},
+        {id: 22, name: "도서", url: "."},
+        {id: 23, name: "Blogger", url: "."},
+        {id: 24, name: "Keep", url: "."},
+        {id: 25, name: "클래스룸", url: "."},
+        {id: 26, name: "어스", url: "."},
+        {id: 27, name: "저장됨", url: "."},
+        {id: 28, name: "Google Ads", url: "."},
+        {id: 29, name: "여행", url: "."},
+        {id: 30, name: "Forms", url: "."},
+        {id: 31, name: "Google store", url: "."},
+        {id: 32, name: "Chrome 웹스토어", url: "."}
+    ];
+
 </script>
 <body>
     <div class="top-right">
@@ -37,12 +90,52 @@
         <div class="input">
             <input type="text" class="input-box" placeholder="Google 검색 또는 URL 입력"/>
         </div>
-        <div class="mic">
+        <div class="mic" onclick="alertBtn('mic')">
             <img class="mic-1" src="./image/mic_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt= ""/>
         </div>
-        <div class="cam">
+        <div class="cam" onclick="alertBtn('cam')">
             <img class="cam-1" src="./image/filter_center_focus_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt= ""/>
         </div>
+    </div>
+    <div class="shortcut">
+        <div class="squ1"  onclick="moveToLink('squ1')">
+            <div class="cir">
+                <div class="naver">
+                    <img class="naverImg" src="./image/네이버.jpeg" alt="" />
+                </div>   
+                <div class="cirName">네이버</div>
+                <div class="iconDot">
+                    <img class="dotImg" src="./image/more_vert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="" />
+                </div> 
+            </div>
+        </div>
+        <div class="squ2" onclick="moveToLink('squ2')">
+            <div class="cir">
+                <div class="youtube">
+                    <img class="youtubeImg" src="./image/유튜브.jpeg" alt="" />
+                </div>
+                <div class="cirName">유튜브</div>
+                <div class="iconDot">
+                    <img class="dotImg" src="./image/more_vert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="squ3" onclick="moveToLink('squ3')">
+            <div class="cir">
+                <div class="daum">
+                    <img class="daumImg" src="./image/다음.jpeg" alt="" />
+                </div>
+                <div class="cirName">다음</div>
+                <div class="iconDot">
+                    <img class="dotImg" src="./image/more_vert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="pageSetting">
+        <img class="setting" src="./image/edit_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="" />
+        <div class="setMent">Chrome 맞춤설정</div>
     </div>
 </body>
 </html>
