@@ -4,10 +4,9 @@
     <link rel="stylesheet" href="./google.css" />  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Google</title>
 </head>
 <script>
-
     function alertBtn(btn) {
         if(btn === 'mic') {
             alert("마이크 준비중입니다.");
@@ -25,41 +24,6 @@
             window.location.href="https://www.daum.net/";
         }
     }
-    
-    const data = [
-        {id: 1, name: "계정", url: "."},
-        {id: 2, name: "검색", url: "."},
-        {id: 3, name: "지도", url: "."},
-        {id: 4, name: "YouTube", url: "."},
-        {id: 5, name: "Gemini", url: "."},
-        {id: 6, name: "뉴스", url: "."},
-        {id: 7, name: "Gmail", url: "."},
-        {id: 8, name: "Meet", url: "."},
-        {id: 9, name: "채팅", url: "."},
-        {id: 10, name: "주소록", url: "."},
-        {id: 11, name: "드라이브", url: "."},
-        {id: 12, name: "Calendar", url: "."},
-        {id: 13, name: "Play", url: "."},
-        {id: 14, name: "번역", url: "."},
-        {id: 15, name: "사진", url: "."},
-        {id: 16, name: "내 광고 센터", url: "."},
-        {id: 17, name: "쇼핑", url: "."},
-        {id: 18, name: "금융", url: "."},
-        {id: 19, name: "Docs", url: "."},
-        {id: 20, name: "Sheets", url: "."},
-        {id: 21, name: "Slides", url: "."},
-        {id: 22, name: "도서", url: "."},
-        {id: 23, name: "Blogger", url: "."},
-        {id: 24, name: "Keep", url: "."},
-        {id: 25, name: "클래스룸", url: "."},
-        {id: 26, name: "어스", url: "."},
-        {id: 27, name: "저장됨", url: "."},
-        {id: 28, name: "Google Ads", url: "."},
-        {id: 29, name: "여행", url: "."},
-        {id: 30, name: "Forms", url: "."},
-        {id: 31, name: "Google store", url: "."},
-        {id: 32, name: "Chrome 웹스토어", url: "."}
-    ];
 
 </script>
 <body>
@@ -74,7 +38,15 @@
             <img class="expe-1" src="./image/experiment_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt= ""/>
         </div>
         <div class="apps">
-            <img class="apps-1" src="./image/apps_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt= ""/>
+            <img id="appsIcon" class="apps-1" src="./image/apps_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt= ""/>
+            <div class="dropdown">
+                <div id="box1" class="box"></div>
+                <div class="SeeMoreBtn">
+                    <span class="SeeMoreBtn1">Google place market<br/></span>
+                    <span class="SeeMoreBtn2">에서 더보기</span>
+                </div>
+            </div>
+            <script src="./dropDown.js"></script>
         </div>
     </div>
 
@@ -131,8 +103,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="squ4" onclick="moveToLink('squ4')">
+            <div class="cir">
+                <div class="goTo">
+                    <img class="goToImg" src="./image/add.png" alt="" />
+                </div>
+                <div class="cirName">바로가기</div>
+            </div>
+        </div>
     </div>
-  
+
     <div class="pageSetting">
         <img class="setting" src="./image/edit_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="" />
         <div class="setMent">Chrome 맞춤설정</div>

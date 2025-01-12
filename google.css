@@ -8,7 +8,7 @@ body{
 }
 
 .Logo{
-    margin-top: 150px;
+    margin-top: 120px;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -27,6 +27,7 @@ body{
     border-color: #e0e0e0;
     margin-top: 50px;
     box-shadow: 0 0 4px;
+    right: 10px;
 }
 
 .search1-1, .mic-1, .cam-1, .expe-1 ,.apps-1{
@@ -39,10 +40,27 @@ body{
     width: 30px;
 }
 
-.mic:hover, .cam:hover{
+.gmailLogo:hover, .upImg:hover{
+    cursor: pointer;
+}
+.gmailLogo:after, .upImg:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px gray;  
+    transform: scaleX(0);  
+}
+.gmailLogo:hover:after, .upImg:hover:after { 
+    transform: scaleX(1); 
+}
+
+.expe:hover, .mic:hover, .cam:hover{
     cursor: pointer;
 }
 
+.expe:hover, .apps:hover{
+    border-radius: 50px;
+    background-color: rgb(234, 230, 230);
+}
 .input{
     margin-left: 5px;
     margin-right: 5px; 
@@ -59,6 +77,10 @@ body{
     outline:none;
 }
 
+input:focus::placeholder{
+    color:transparent;
+}
+
 .upImg, .expe, .apps{
     margin-left: 50px;
 }
@@ -68,8 +90,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px; 
-    margin-top: 70px;
+    gap: 60px; 
+    margin-top: 30px;
 }
 
 .cir {
@@ -91,7 +113,18 @@ body{
     box-shadow: 0 2px 4px rgba(216, 212, 212, 0.1);
 }
 
-.naver img, .youtube img, .daum img {
+.goTo{
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(216, 212, 212, 0.1);
+    background-color: rgb(216, 227, 250);
+}
+
+.naver img, .youtube img, .daum img, .goToImg{
     width: 40px; 
     height: 40px;
     object-fit: cover; 
@@ -104,7 +137,7 @@ body{
     color: #333;
 }
 
-.squ1, .squ2, .squ3{
+.squ1, .squ2, .squ3, .squ4{
     width: 150px;
     height: 170px;
     border-radius: 8px;
@@ -127,7 +160,7 @@ body{
     opacity: 0;
 }
 
-.squ1:hover, .squ2:hover, .squ3:hover{
+.squ1:hover, .squ2:hover, .squ3:hover, .squ4:hover{
     background-color: rgb(168, 166, 166);
     cursor: pointer;
 }
@@ -145,7 +178,6 @@ body{
 }
 
 /* 우측 하단 맞춤설정 */
-
 .pageSetting{
     background-color: rgb(216, 227, 250);
     display: flex;
@@ -166,4 +198,82 @@ body{
     height: 25px;
 }
 
+.pageSetting:hover{
+    cursor: pointer;;
+}
 
+/* 드롭다운 기본 스타일 */
+.apps {
+    position: relative;
+    display: inline-block;
+}
+
+.apps-1 {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px; /* 아이콘 아래에 표시 */
+    right: 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; 
+    width: 400px; 
+    max-height: 400px; 
+    overflow-y: auto; 
+    z-index: 100;
+    background-color: rgb(199, 205, 217);
+}
+
+.dropdown.active {
+    display: flex; 
+    flex-direction: column; /* 세로로 배치 */
+    align-items: center; /* 수평 가운데 정렬 */
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개씩 한 줄 */
+    gap: 10px; /* 아이템 간격 */
+    padding: 10px;
+}
+
+#box1{
+    background-color: #f9f9f9;
+    margin: 10px;
+}
+
+.item {
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.item:hover {
+    background: rgb(199, 205, 217);
+}
+
+.SeeMoreBtn {
+    width: 200px;
+    border: solid 1px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 0;
+}
+
+.SeeMoreBtn span {
+    text-align: center;
+    font-size: 14px;
+    color: #0b57d0;
+}
+
+.SeeMoreBtn:hover{
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
