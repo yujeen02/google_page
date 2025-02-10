@@ -5,6 +5,6 @@ Google 메인 화면 만들기
 
 <바로가기 기능 및 드롭다운>
   
-  ![Image](https://github.com/user-attachments/assets/acfc3897-70b0-4af4-b75d-1b11af74980d)
+  ![Image](https://github.com/user-attachments/assets/cae66132-03af-4c3c-82b8-6fe416dd145e)
 
 <br />
